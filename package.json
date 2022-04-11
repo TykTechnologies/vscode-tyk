@@ -1,5 +1,11 @@
 {
 	"name": "tyk-schemas",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/buraksekili/vscode-tyk"
+	},
+	"publisher": "buraksek",
+	"license": "MPL-2.0",
 	"displayName": "tyk",
 	"description": "tyk-schemas provides schemas for your Tyk related configuration files.",
 	"version": "0.0.1",
@@ -14,6 +20,26 @@
 	],
 	"main": "./extension.js",
 	"contributes": {
+		"jsonValidation": [
+			{
+				"fileMatch": [
+					"tyk.*.conf"
+				],
+				"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_tyk.oss.conf"
+			},
+			{
+				"fileMatch": [
+					"apikey.*.json"
+				],
+				"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apikey.json"
+			},
+			{
+				"fileMatch": [
+					"apidef.*.json"
+				],
+				"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apidef_lean.json"
+			}
+		],
 		"commands": [
 			{
 				"command": "tyk-schemas.helloWorld",

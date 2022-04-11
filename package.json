@@ -8,7 +8,7 @@
 	"license": "MPL-2.0",
 	"displayName": "tyk",
 	"description": "tyk-schemas provides schemas for your Tyk related configuration files.",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.66.0"
 	},
@@ -16,6 +16,11 @@
 		"Other"
 	],
 	"activationEvents": [
+		"workspaceContains:**/.json",
+		"onStartupFinished",
+		"onLanguage:json",
+		"onLanguage:jsonc",
+		"onDebug",
 		"onCommand:tyk-schemas.helloWorld"
 	],
 	"main": "./extension.js",

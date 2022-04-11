@@ -94,6 +94,7 @@ function activate(context) {
 	});
 
 	context.subscriptions.push(disposable);
+	vscode.commands.executeCommand("tyk-schemas.helloWorld");
 }
 
 // this method is called when your extension is deactivated

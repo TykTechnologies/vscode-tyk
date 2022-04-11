@@ -53,7 +53,7 @@ function activate(context) {
 			await filesConfiguration.update("associations", associations, vscode.ConfigurationTarget.Global)
 		} catch (error) {
 			console.error(error)
-			vscode.window.showInformationMessage(`Tyk: cannot update files.associations, err: ${error.message}`)
+			vscode.window.showErrorMessage(`Tyk: cannot update files.associations, err: ${error.message}`)
 			return
 		}
 		console.log("done!")
@@ -84,7 +84,7 @@ function activate(context) {
 		try {
 			await JSONSettings.update("schemas", schemas, vscode.ConfigurationTarget.Global)
 		} catch (error) {
-			vscode.window.showInformationMessage(`Tyk: cannot update json.schemas, err: ${error.message}`)
+			vscode.window.showErrorMessage(`Tyk: cannot update json.schemas, err: ${error.message}`)
 			return
 		}
 		console.log("done!")

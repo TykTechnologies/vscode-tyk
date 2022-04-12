@@ -26,10 +26,6 @@
 		"API Gateway"
 	],
 	"activationEvents": [
-		"workspaceContains:**/.json",
-		"onStartupFinished",
-		"onLanguage:json",
-		"onLanguage:jsonc",
 		"onDebug",
 		"onCommand:tyk-schemas.main"
 	],

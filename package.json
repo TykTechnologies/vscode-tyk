@@ -23,7 +23,10 @@
 	],
 	"keywords": [
 		"Tyk",
-		"API Gateway"
+		"Tyk config",
+		"API Gateway",
+		"JSON validation",
+		"JSON"
 	],
 	"activationEvents": [
 		"onDebug",

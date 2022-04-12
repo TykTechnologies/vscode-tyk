@@ -4,16 +4,26 @@
 		"type": "git",
 		"url": "https://github.com/buraksekili/vscode-tyk"
 	},
-	"publisher": "buraksek",
+	"publisher": "TykTechnologiesLimited",
+	"icon": "images/Tyk-logo.png",
 	"license": "MPL-2.0",
-	"displayName": "tyk",
-	"description": "tyk-schemas provides schemas for your Tyk related configuration files.",
-	"version": "0.0.3",
+	"displayName": "Tyk Schemas",
+	"description": "Tyk Schemas provides schemas for your Tyk related configuration files.",
+	"version": "0.0.1",
+	"homepage": "https://github.com/buraksekili/vscode-tyk/blob/main/README.md",
+	"bugs": {
+		"url": "https://github.com/buraksekili/vscode-tyk/issues"
+	},
 	"engines": {
 		"vscode": "^1.66.0"
 	},
 	"categories": [
+		"Snippets",
 		"Other"
+	],
+	"keywords": [
+		"Tyk",
+		"API Gateway"
 	],
 	"activationEvents": [
 		"workspaceContains:**/.json",
@@ -21,7 +31,7 @@
 		"onLanguage:json",
 		"onLanguage:jsonc",
 		"onDebug",
-		"onCommand:tyk-schemas.helloWorld"
+		"onCommand:tyk-schemas.main"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -47,7 +57,7 @@
 		],
 		"commands": [
 			{
-				"command": "tyk-schemas.helloWorld",
+				"command": "tyk-schemas.main",
 				"title": "Tyk Schemas"
 			}
 		]

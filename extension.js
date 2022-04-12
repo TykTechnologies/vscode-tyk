@@ -38,7 +38,7 @@ function activate(context) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('tyk-schemas.helloWorld', async function () {
+	let disposable = vscode.commands.registerCommand('tyk-schemas.main', async function () {
 		// The code you place here will be executed every time your command is executed
 
 		// Set intellisense to work for Tyk's config files and update VSCode to recognice .conf 
@@ -94,7 +94,7 @@ function activate(context) {
 	});
 
 	context.subscriptions.push(disposable);
-	vscode.commands.executeCommand("tyk-schemas.helloWorld");
+	vscode.commands.executeCommand("tyk-schemas.main");
 }
 
 // this method is called when your extension is deactivated

@@ -9,7 +9,7 @@
 	"license": "MPL-2.0",
 	"displayName": "Tyk Schemas",
 	"description": "Tyk Schemas provides schemas for your Tyk related configuration files.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"homepage": "https://github.com/buraksekili/vscode-tyk/blob/main/README.md",
 	"bugs": {
 		"url": "https://github.com/buraksekili/vscode-tyk/issues"

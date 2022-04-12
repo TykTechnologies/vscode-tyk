@@ -7,7 +7,9 @@
 Once [Tyk Schemas](https://marketplace.visualstudio.com/items?itemName=TykTechnologiesLimited.tyk-schemas) is installed, you are ready to use it. 
 Tyk Schemas will automatically update the JSON schema preferences of your VS Code.
 
-If you want to run Tyk Schemas manually, open the command palette (`Cmd + p` or `Ctrl + p`), type `Tyk Schemas` and run. That's it!
+If you want to run Tyk Schemas manually:
+- Run your command from the command palette by pressing (`Ctrl+Shift+P` or `Cmd+Shift+P`)
+- Type `Tyk Schemas` and run.
 
 ## Schemas
 

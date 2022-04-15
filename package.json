@@ -2,17 +2,17 @@
 	"name": "tyk-schemas",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/buraksekili/vscode-tyk"
+		"url": "https://github.com/TykTechnologies/vscode-tyk"
 	},
 	"publisher": "TykTechnologiesLimited",
 	"icon": "images/Tyk-logo.png",
 	"license": "MPL-2.0",
 	"displayName": "Tyk Schemas",
 	"description": "Tyk Schemas provides schemas for your Tyk related configuration files.",
-	"version": "0.0.2",
-	"homepage": "https://github.com/buraksekili/vscode-tyk/blob/main/README.md",
+	"version": "0.0.4",
+	"homepage": "https://github.com/TykTechnologies/vscode-tyk/blob/main/README.md",
 	"bugs": {
-		"url": "https://github.com/buraksekili/vscode-tyk/issues"
+		"url": "https://github.com/TykTechnologies/vscode-tyk/issues"
 	},
 	"engines": {
 		"vscode": "^1.66.0"
@@ -30,6 +30,7 @@
 	],
 	"activationEvents": [
 		"onDebug",
+		"onStartupFinished",
 		"onCommand:tyk-schemas.main"
 	],
 	"main": "./extension.js",

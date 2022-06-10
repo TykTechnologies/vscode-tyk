@@ -33,7 +33,7 @@
 		"onStartupFinished",
 		"onCommand:tyk-schemas.main"
 	],
-	"main": "./extension.js",
+	"main": "./src/extension.js",
 	"contributes": {
 		"jsonValidation": [
 			{

@@ -3,7 +3,7 @@
 ## What's in the folder
 
 * This folder contains all of the files necessary for the extension.
-* `extension.js` - this is the main file where you will provide the implementation of your command.
+* `./src/extension.js` - this is the main file where you will provide the implementation of your command.
   * The file exports one function, `activate`, which is called the very first time the extension is activated (in this case by executing the command).
 
 ## Get up and running straight away
@@ -14,5 +14,5 @@
 
 ## Make changes
 
-* You can relaunch the extension from the debug toolbar after changing code in `extension.js`.
+* You can relaunch the extension from the debug toolbar after changing code in `./src/extension.js`.
 * You can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with the extension to load your changes.

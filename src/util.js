@@ -10,7 +10,8 @@ function combineDuplicates(data) {
     data = data.filter((userSchema) => {
         if (seen.hasOwnProperty(userSchema.url)) {
             let prev = seen[userSchema.url]
-            prev.fileMatch.concat(userSchema.fileMatch)
+            prev.fileMatch = prev.fileMatch.concat(userSchema.fileMatch)
+            prev.fileMatch = [...new Set(prev.fileMatch)]
 
             return false;
         }

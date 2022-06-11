@@ -65,17 +65,25 @@
 	"scripts": {
 		"lint": "eslint .",
 		"pretest": "npm run lint",
-		"test": "node ./test/runTest.js"
+		"test": "node ./test/runTest.js",
+		"unit": "jest ./src/tests"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.66.0",
 		"@types/glob": "^7.2.0",
 		"@types/mocha": "^9.1.0",
 		"@types/node": "14.x",
+		"@types/vscode": "^1.66.0",
+		"@vscode/test-electron": "^2.1.3",
 		"eslint": "^8.11.0",
 		"glob": "^7.2.0",
+		"jest": "^28.1.1",
 		"mocha": "^9.2.2",
-		"typescript": "^4.5.5",
-		"@vscode/test-electron": "^2.1.3"
+		"typescript": "^4.5.5"
+	},
+	"__metadata": {
+		"id": "95b80e14-0e5b-435b-b04f-9b50ecc2d6c4",
+		"publisherDisplayName": "Tyk Technologies Limited",
+		"publisherId": "5e02705e-8ce9-425e-bb74-8ecac88297ce",
+		"isPreReleaseVersion": false
 	}
 }

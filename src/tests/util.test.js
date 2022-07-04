@@ -1,11 +1,12 @@
 const assert = require('assert');
-const { combineDuplicates } = require('../../src/util');
+const exp = require('constants');
+const { combineDuplicates, updateUserSchemas } = require('../../src/util');
+
+const schemaTykOSSURL = "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_tyk.oss.conf"
+const schemaApiDefLeanURL = "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apidef_lean.json"
+const schemaApiKeyURL = "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apikey.json"
 
 describe('Combine duplicates', () => {
-    const schemaTykOSSURL = "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_tyk.oss.conf"
-    const schemaApiDefLeanURL = "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apidef_lean.json"
-    const schemaApiKeyURL = "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apikey.json"
-
     it('Undefined json.schemas', () => {
         const data = combineDuplicates(undefined)
 
@@ -180,7 +181,7 @@ describe('Combine duplicates', () => {
         expect(data[0].fileMatch).toEqual([])
     });
 
-    it('Duplicated URL with different URLs, that contains more than one invalid fileMatch', () => {
+    it('Duplicated different URLs that contains more than one invalid fileMatch', () => {
         let fileMatch1 = "tyk.*.conf"
         let fileMatch2 = "test_tyk.*.conf"
         let fileMatch3 = "tyk_test.*.conf"
@@ -223,5 +224,63 @@ describe('Combine duplicates', () => {
         expect(data[1].fileMatch.length).toEqual(2)
         expect(data[1].fileMatch).toEqual(expect.arrayContaining([fileMatch2, fileMatch3]))
     });
-
 });
+
+describe('Main execution', () => {
+    it('Update empty json.schemas', () => {
+        let userSchemas = []
+        let data, schemasUpdated = updateUserSchemas(userSchemas, false);
+        data = combineDuplicates(userSchemas);
+
+        expect(schemasUpdated).toEqual(true)
+        expect(data).toBeInstanceOf(Array)
+        expect(data.length).toEqual(3)
+
+        const fileMap = ['tyk.*.conf', 'apikey.*.json', 'apidef.*.json']
+        const URLMap = [schemaTykOSSURL, schemaApiKeyURL, schemaApiDefLeanURL]
+        for (let i = 0; i < 3; i++) {
+            expect(data[i]).toHaveProperty("url")
+            expect(data[i]).toHaveProperty("fileMatch")
+            expect(data[i]).toMatchObject({
+                url: URLMap[i],
+            })
+
+            expect(data[i].fileMatch).toBeInstanceOf(Array)
+            expect(data[i].fileMatch.length).toEqual(1)
+            expect(data[i].fileMatch).toEqual(expect.arrayContaining([fileMap[i]]))
+        }
+    });
+
+    it('Update existing json.schemas', () => {
+        let userSchemas = [
+            {
+                fileMatch: [
+                    "temp.file"
+                ],
+                url: "temp.url"
+            },
+        ]
+        let data, schemasUpdated = updateUserSchemas(userSchemas, false);
+        data = combineDuplicates(userSchemas);
+
+        expect(schemasUpdated).toEqual(true)
+        expect(data).toBeInstanceOf(Array)
+        expect(data.length).toEqual(4)
+
+        const fileMap = ['tyk.*.conf', 'apikey.*.json', 'apidef.*.json']
+        const URLMap = [schemaTykOSSURL, schemaApiKeyURL, schemaApiDefLeanURL]
+        let counter = 0;
+        for (let i = 1; i < 4; i++) {
+            expect(data[i]).toHaveProperty("url")
+            expect(data[i]).toHaveProperty("fileMatch")
+            expect(data[i]).toMatchObject({
+                url: URLMap[counter],
+            })
+
+            expect(data[i].fileMatch).toBeInstanceOf(Array)
+            expect(data[i].fileMatch.length).toEqual(1)
+            expect(data[i].fileMatch).toEqual(expect.arrayContaining([fileMap[counter]]))
+            counter += 1;
+        }
+    });
+})

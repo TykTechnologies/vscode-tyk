@@ -29,13 +29,15 @@ function activate(context) {
 		},
 		{
 			"fileMatch": [
-				"apidef.*.json"
+				"apidef.*.json",
+				"TykDefinition-*.json"
 			],
 			"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apidef_lean.json"
 		},
 		{
 			"fileMatch": [
-				"oasapidef.*.json"
+				"oasapidef.*.json",
+				"TykOasApiDef-*.json"
 			],
 			"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apidefoas.json"
 		}

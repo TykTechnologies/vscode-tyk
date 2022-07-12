@@ -33,6 +33,12 @@ function activate(context) {
 			],
 			"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apidef_lean.json"
 		},
+		{
+			"fileMatch": [
+				"oasapidef.*.json"
+			],
+			"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apidefoas.json"
+		}
 	]
 
 	// The command has been defined in the package.json file

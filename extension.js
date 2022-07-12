@@ -19,19 +19,22 @@ function activate(context) {
 			"fileMatch": [
 				"tyk.*.conf"
 			],
-			"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_tyk.oss.conf"
+			"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_tyk.oss.conf",
+			"addedBy": "tyk"
 		},
 		{
 			"fileMatch": [
 				"apikey.*.json"
 			],
-			"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apikey.json"
+			"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apikey.json",
+			"addedBy": "tyk"
 		},
 		{
 			"fileMatch": [
 				"apidef.*.json"
 			],
-			"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apidef_lean.json"
+			"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apidef_lean.json",
+			"addedBy": "tyk"
 		},
 	]
 
@@ -98,7 +101,17 @@ function activate(context) {
 }
 
 // this method is called when your extension is deactivated
-function deactivate() { }
+function deactivate() {
+	let JSONSettings = vscode.workspace.getConfiguration("json")
+	if (JSONSettings.has("schemas")) {
+		let schemas = JSONSettings.get("schemas");
+		schemas = schemas.filter(schema => schema.addedBy !== "tyk");
+		JSONSettings.update("schemas", schemas, vscode.ConfigurationTarget.Global).then(() => {
+			window.showInformationMessage('Uninstalled tyk validator');
+			console.log("deactivated tyk extension!")
+		})
+	}
+}
 
 module.exports = {
 	activate,

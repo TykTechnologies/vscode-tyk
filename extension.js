@@ -29,10 +29,18 @@ function activate(context) {
 		},
 		{
 			"fileMatch": [
-				"apidef.*.json"
+				"apidef.*.json",
+				"TykDefinition-*.json"
 			],
 			"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apidef_lean.json"
 		},
+		{
+			"fileMatch": [
+				"oasapidef.*.json",
+				"TykOasApiDef-*.json"
+			],
+			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/main/JSON/draft-04/schema_apidefoas.json"
+		}
 	]
 
 	// The command has been defined in the package.json file

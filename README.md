@@ -13,9 +13,9 @@ If you want to run Tyk Schemas manually:
 
 ## Schemas
 
-Tyk Schemas VS Code extension uses [tyk-schemas](https://github.com/letzya/tyk-schemas) project to load schemas. 
+Tyk Schemas VS Code extension uses [tyk-schemas](https://github.com/tykTechnologies/tyk-schemas) project to load schemas. 
 
-Please refer to [tyk-schemas](https://github.com/letzya/tyk-schemas) project repository to see details of the provided schemas.
+Please refer to [tyk-schemas](https://github.com/tykTechnologies/tyk-schemas) project repository to see details of the provided schemas.
 
 ## Community
 

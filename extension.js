@@ -42,7 +42,8 @@ function activate(context) {
 				"oasapidef.*.json",
 				"TykOasApiDef-*.json"
 			],
-			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/main/JSON/draft-04/schema_apidefoas.json"
+			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/main/JSON/draft-04/schema_apidefoas.json",
+			"addedBy": "tyk"
 		}
 	]
 

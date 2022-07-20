@@ -9,7 +9,7 @@
 	"license": "MPL-2.0",
 	"displayName": "Tyk Schemas",
 	"description": "Tyk Schemas provides schemas for your Tyk related configuration files.",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"homepage": "https://github.com/TykTechnologies/vscode-tyk/blob/main/README.md",
 	"bugs": {
 		"url": "https://github.com/TykTechnologies/vscode-tyk/issues"
@@ -40,19 +40,27 @@
 				"fileMatch": [
 					"tyk.*.conf"
 				],
-				"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_tyk.oss.conf"
+				"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/main/JSON/draft-07/schema_tyk.oss.conf"
 			},
 			{
 				"fileMatch": [
 					"apikey.*.json"
 				],
-				"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apikey.json"
+				"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/main/JSON/draft-07/schema_apikey.json"
 			},
 			{
 				"fileMatch": [
-					"apidef.*.json"
+					"apidef.*.json",
+					"TykDefinition-*.json"
 				],
-				"url": "https://raw.githubusercontent.com/letzya/tyk-schemas/main/schema_apidef_lean.json"
+				"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/main/JSON/draft-07/schema_apidef_lean.json"
+			},
+			{
+				"fileMatch": [
+					"oasapidef.*.json",
+					"TykOasApiDef-*.json"
+				],
+				"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/main/JSON/draft-04/schema_apidefoas.json"
 			}
 		],
 		"commands": [

@@ -1,6 +1,11 @@
 const TykSchemas = require("./tyk-schemas-data")
 
-// ref: https://stackoverflow.com/a/30026006
+/**
+ * combineDuplicates combines duplicates in the given user schema array. If the given data is not
+ * an array, it returns undefined. Each element of the user schema array is expected to have 'url'
+ * field in it.
+ * @param {Array} data - User's json.schemas configurations.
+ */
 function combineDuplicates(data) {
     if (!Array.isArray(data)) {
         return undefined
@@ -27,11 +32,15 @@ function combineDuplicates(data) {
     return data
 }
 
-// updateUserSchemas updates given userSchemas, returns updated userSchema and 
-// 'updated' boolean that is true in case of userSchemas is updated. If user has already
-// a valid Tyk Schemas configuration set in their json.schemas, return same userSchema and 
-// 'updated' with its initial value.
-function updateUserSchemas(userSchemas, updated) {
+
+/**
+* updateUserSchemas updates given userSchemas, returns updated userSchema and 
+* 'updated' boolean that is true in case of userSchemas is updated. If user has already
+* a valid Tyk Schemas configuration set in their json.schemas, return same userSchema and 
+* 'updated' with its initial value.
+ * @param {Array} userSchemas - User's json.schemas configurations.
+ */
+function updateUserSchemas(userSchemas) {
     for (let i = 0; i < TykSchemas.length; i++) {
         const tykSchema = TykSchemas[i]
         const exists = userSchemas.some(schema => {

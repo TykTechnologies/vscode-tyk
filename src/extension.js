@@ -29,7 +29,7 @@ function activate(context) {
 		}
 
 		let schemasUpdated = false;
-		userSchemas, schemasUpdated = updateUserSchemas(userSchemas, schemasUpdated)
+		userSchemas, schemasUpdated = updateUserSchemas(userSchemas)
 		userSchemas = combineDuplicates(userSchemas)
 
 		try {

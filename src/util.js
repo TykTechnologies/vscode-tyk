@@ -37,10 +37,11 @@ function combineDuplicates(data) {
 * updateUserSchemas updates given userSchemas, returns updated userSchema and 
 * 'updated' boolean that is true in case of userSchemas is updated. If user has already
 * a valid Tyk Schemas configuration set in their json.schemas, return same userSchema and 
-* 'updated' with its initial value.
+* 'updated' with false.
  * @param {Array} userSchemas - User's json.schemas configurations.
  */
 function updateUserSchemas(userSchemas) {
+    let updated = false;
     for (let i = 0; i < TykSchemas.length; i++) {
         const tykSchema = TykSchemas[i]
         const exists = userSchemas.some(schema => {

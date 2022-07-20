@@ -49,7 +49,17 @@ function activate(context) {
 }
 
 // this method is called when your extension is deactivated
-function deactivate() { }
+function deactivate() {
+	let JSONSettings = vscode.workspace.getConfiguration("json")
+	if (JSONSettings.has("schemas")) {
+		let schemas = JSONSettings.get("schemas");
+		schemas = schemas.filter(schema => schema.addedBy !== "tyk");
+		JSONSettings.update("schemas", schemas, vscode.ConfigurationTarget.Global).then(() => {
+			window.showInformationMessage('Uninstalled tyk validator');
+			console.log("deactivated tyk extension!")
+		})
+	}
+}
 
 module.exports = {
 	activate,

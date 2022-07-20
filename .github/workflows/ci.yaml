@@ -20,4 +20,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm run unit
+      - name: Install dependencies
+        run: npm install 
+      - name: Run unit tests
+        run: npm run unit

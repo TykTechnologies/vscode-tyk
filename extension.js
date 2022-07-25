@@ -19,14 +19,14 @@ function activate(context) {
 			"fileMatch": [
 				"tyk.*.conf"
 			],
-			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/main/JSON/draft-07/schema_tyk.oss.conf",
+			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-07/schema_tyk.oss.conf",
 			"addedBy": "tyk"
 		},
 		{
 			"fileMatch": [
 				"apikey.*.json"
 			],
-			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/main/JSON/draft-07/schema_apikey.json",
+			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-07/schema_apikey.json",
 			"addedBy": "tyk"
 		},
 		{
@@ -34,7 +34,7 @@ function activate(context) {
 				"apidef.*.json",
 				"TykDefinition-*.json"
 			],
-			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/main/JSON/draft-07/schema_apidef_lean.json",
+			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-07/schema_apidef_lean.json",
 			"addedBy": "tyk"
 		},
 		{
@@ -42,7 +42,7 @@ function activate(context) {
 				"oasapidef.*.json",
 				"TykOasApiDef-*.json"
 			],
-			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/main/JSON/draft-04/schema_apidefoas.json",
+			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-04/schema_TykOasApiDef_3.0.x.json",
 			"addedBy": "tyk"
 		}
 	]

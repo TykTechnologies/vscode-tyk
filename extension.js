@@ -17,21 +17,23 @@ function activate(context) {
 	const TykSchemas = [
 		{
 			"fileMatch": [
-				"tyk.*.conf"
+				"tyk.conf",
+				"tyk-*.conf"
 			],
 			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-07/schema_tyk.oss.conf",
 			"addedBy": "tyk"
 		},
 		{
 			"fileMatch": [
-				"apikey.*.json"
+				"apikey-*.json"
 			],
 			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-07/schema_apikey.json",
 			"addedBy": "tyk"
 		},
 		{
 			"fileMatch": [
-				"apidef.*.json",
+				"apidef.json",
+				"apidef-*.json",
 				"TykAPIDef-*.json"
 			],
 			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-07/schema_apidef_lean.json",
@@ -39,7 +41,8 @@ function activate(context) {
 		},
 		{
 			"fileMatch": [
-				"oasapidef.*.json",
+				"oasapidef.json",
+				"oasapidef-*.json",
 				"TykOasApiDef-*.json"
 			],
 			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-04/schema_TykOasApiDef_3.0.x.json",

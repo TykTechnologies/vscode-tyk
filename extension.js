@@ -32,7 +32,7 @@ function activate(context) {
 		{
 			"fileMatch": [
 				"apidef.*.json",
-				"TykDefinition-*.json"
+				"TykAPIDef-*.json",
 			],
 			"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-07/schema_apidef_lean.json",
 			"addedBy": "tyk"

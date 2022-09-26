@@ -35,23 +35,34 @@
 	],
 	"main": "./extension.js",
 	"contributes": {
+		"languages": [
+			{
+				"id": "json",
+				"extensions": [
+					".conf"
+				],
+				"aliases": [
+					"Tyk Configuration"
+				]
+			}
+		],
 		"jsonValidation": [
 			{
 				"fileMatch": [
-					"tyk.*.conf"
+					"tyk*.conf"
 				],
 				"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-07/schema_tyk.oss.conf"
 			},
 			{
 				"fileMatch": [
-					"apikey.*.json"
+					"apikey*.json"
 				],
 				"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-07/schema_apikey.json"
 			},
 			{
 				"fileMatch": [
-					"apidef.*.json",
-					"TykDefinition-*.json"
+					"apidef*.json",
+					"TykDefinition*.json"
 				],
 				"url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-07/schema_apidef_lean.json"
 			},

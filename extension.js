@@ -105,8 +105,33 @@ function activate(context) {
 		vscode.window.showInformationMessage('Tyk: Tyk JSON schemas were added to your setting.json and will now validate and autocomplete your tyk files!');
 	});
 
+	const provider = {
+		resolveWebviewView: function (webview, webviewContext, token) {
+			webview.webview.options = { enableScripts: true }
+			webview.webview.html = getWebviewContent();
+		}
+	};
+	context.subscriptions.push(
+		vscode.window.registerWebviewViewProvider("tyk-schemas.sidebar", provider)
+	);
+
 	context.subscriptions.push(disposable);
 	vscode.commands.executeCommand("tyk-schemas.main");
+}
+
+
+function getWebviewContent() {
+	return `<!DOCTYPE html>
+  <html lang="en">
+  <head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Example Webview</title>
+  </head>
+  <body>
+	 <h1>This works!</h1>
+  </body>
+  </html>`;
 }
 
 // this method is called when your extension is deactivated

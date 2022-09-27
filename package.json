@@ -29,8 +29,7 @@
 		"JSON"
 	],
 	"activationEvents": [
-		"onDebug",
-		"onStartupFinished",
+		"onView:tyk-schemas.sidebar",
 		"onCommand:tyk-schemas.main"
 	],
 	"main": "./extension.js",
@@ -66,9 +65,28 @@
 		"commands": [
 			{
 				"command": "tyk-schemas.main",
-				"title": "Tyk Schemas"
+				"category": "Tyk",
+				"title": "Run"
 			}
-		]
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "tyk-schemas-sidebar-view",
+					"title": "Tyk",
+					"icon": "images/img-test.svg"
+				}
+			]
+		},
+		"views": {
+			"tyk-schemas-sidebar-view": [
+				{
+					"id": "tyk-schemas.sidebar",
+					"name": "API Designer",
+					"type": "webview"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"lint": "eslint .",

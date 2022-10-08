@@ -1,4 +1,4 @@
-# Welcome to Tyk Schemas
+# Welcome to Tyk Schemas VS Code Extension
 
 ## What's in the folder
 

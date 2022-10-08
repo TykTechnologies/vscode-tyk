@@ -7,7 +7,7 @@ This extension can help you write and validate api definition, keys and config f
 
 For supported file formats and schemas list, check the "Feature Contribution" section in the VS Code extension
 
-All the schemas used by Tyk Schemas extension are taken from [tyk-schemas](https://github.com/tykTechnologies/tyk-schemas) repsitory. Please refer to it  for details on the provided schemas (or to suggest improvments).
+All the schemas used by Tyk Schemas extension are taken from [tyk-schemas](https://github.com/tykTechnologies/tyk-schemas) repository. Please refer to it for details on the provided schemas (or to suggest improvements).
 
 
 

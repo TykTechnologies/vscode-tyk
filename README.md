@@ -22,7 +22,7 @@ If you want to run Tyk Schemas manually:
 
 ## Community
 
-This project is taking it's first steps in the world. If you find any defects, please raise an [issue](https://github.com/TykTechnologies/vscode-tyk/issues). If you need support of more file format please raise an issue as well.
+This project is taking it's first steps in the world. If you find any defects, please raise an [issue](https://github.com/TykTechnologies/vscode-tyk/issues). If you need support for more file formats, please raise an issue as well.
 We welcome code contributions as well, both in this repo and in [tyk-schemas](https://github.com/tykTechnologies/tyk-schemas) project.
 
 ## Local development

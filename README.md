@@ -41,7 +41,7 @@ Example of the code you need to add to the `setting.json` file
 "json.schemas": [
         {
             "fileMatch": [
-                "tyk.*.conf"
+                "<your_filename_pattern>"
             ],
             "url": "https://raw.githubusercontent.com/TykTechnologies/tyk-schemas/v0.1/JSON/draft-07/schema_tyk.oss.conf",
         },

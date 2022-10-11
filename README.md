@@ -1,7 +1,7 @@
 # VS Code Tyk extension
 
 [Tyk Schemas VS Code extension](https://marketplace.visualstudio.com/items?itemName=TykTechnologiesLimited.tyk-schemas) validates Tyk JSON schemas for various JSON objects/files used by Tyk products.
-This extension can help you write and validate api definition, keys and config files with [VS Code IntelliSense] (https://code.visualstudio.com/docs/editor/intellisense) which validates and autocomplete the required and optional fields and also provides default values and examples to make your work with Tyk faster and easier. This way you can avoid the back&forth copy+amend code snippt from the docs and start using Tyk natively as a language.
+This extension can help you write and validate api definition, keys and config files with [VS Code IntelliSense] (https://code.visualstudio.com/docs/editor/intellisense) which validates and autocomplete the required and optional fields and also provides default values and examples to make your work with Tyk faster and easier. This way you can avoid the back&forth copy+amend code snippet from the docs and start using Tyk natively as a language.
 
 ## Installing Tyk Schemas Extension
 Click on the "install" button, like you would with any other extension

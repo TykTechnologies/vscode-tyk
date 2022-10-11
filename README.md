@@ -33,7 +33,7 @@ As you can see below, when you name the file in the right format you'll see a po
 
 ### Creating and testing new schemas
 
-In some cases you'd want to add your own schemas or maybe add schemas from our schemas repo that have not been publishe to the VS Code extension just yet.
+In some cases, you'd want to add your own schemas or maybe add schemas from our schemas repo that have not been published to the VS Code extension just yet.
 In this case you can add the url to the `setting.json` file in VS Code (in MacOS open via "Preferences`), reload the window and start using the schema.
 Example of the code you need to add to the `setting.json` file
 

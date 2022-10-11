@@ -14,7 +14,7 @@ For supported file formats and schemas list, check the "Feature Contribution" se
 
 All the schemas used by Tyk Schemas extension are taken from [tyk-schemas](https://github.com/tykTechnologies/tyk-schemas) repository. Please refer to it for details on the provided schemas (or to suggest improvements and report bugs).
 
-The repository that underlies this extention is [vscode-tyk](https://github.com/TykTechnologies/vscode-tyk) - please use it to report bugs or request features such as more file formats. 
+The repository that underlies this extension is [vscode-tyk](https://github.com/TykTechnologies/vscode-tyk) - please use it to report bugs or request features such as more file formats. 
 
 
 ## Using Tyk Schemas Extension

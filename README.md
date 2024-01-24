@@ -1,7 +1,8 @@
 # VS Code Tyk extension
 
 [Tyk Schemas VS Code extension](https://marketplace.visualstudio.com/items?itemName=TykTechnologiesLimited.tyk-schemas) validates Tyk JSON schemas for various JSON objects/files used by Tyk products.
-This extension can help you write and validate api definition, keys and config files with [VS Code IntelliSense] (https://code.visualstudio.com/docs/editor/intellisense) which validates and autocomplete the required and optional fields and also provides default values and examples to make your work with Tyk faster and easier. This way you can avoid the back&forth copy+amend code snippet from the docs and start using Tyk natively as a language.
+This extension can help you write and validate API Definition, keys, and config files with [VS Code IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) which validates and autocomplete 
+the required and optional fields and also provides default values and examples to make your work with Tyk faster and easier. This way you can avoid the back&forth copy+amend code snippet from the docs and start using Tyk natively as a language.
 
 ## Installing Tyk Schemas Extension
 Click on the "install" button, like you would with any other extension
@@ -20,13 +21,13 @@ The repository that underlies this extension is [vscode-tyk](https://github.com/
 ## Using Tyk Schemas Extension
 
 Once [Tyk Schemas extension](https://marketplace.visualstudio.com/items?itemName=TykTechnologiesLimited.tyk-schemas) is installed, you are ready to start using it. 
-The only requiremnt is to name the file in the following format:
+The only requirement is to name the file in the following format:
 - `tyk*.conf` - For Tyk gateway config file
 - `apikey*.json`	For tyk gateway keys files/payloads
 - `apidef*.json`, `TykDefinition*.json` - For Tyk API definition files/payloads
 - `oasapidef*.json`, `TykOasApiDef*.json` - For Tyk OAS API definition files/payloads
 
-As you can see below, when you name the file in the right format you'll see a pop up window with suggestion to auto-complete just as it would with any programing language. If you can't see the pop up click `control`+`space`.
+As you can see below, when you name the file in the right format you'll see a pop-up window with a suggestion to auto-complete just as it would with any programming language. If you can't see the pop up click `control`+`space`.
 
 <img width="1371" alt="image" src="https://user-images.githubusercontent.com/3155222/194720523-6c6655f7-a12b-4dbe-876b-7d3f8ebd780c.png">
 
@@ -34,7 +35,7 @@ As you can see below, when you name the file in the right format you'll see a po
 ### Creating and testing new schemas
 
 In some cases, you'd want to add your own schemas or maybe add schemas from our schemas repo that have not been published to the VS Code extension just yet.
-In this case, you can add the URL to the `setting.json` file in VS Code (in MacOS open via `Preferences`), reload the window and start using the schema.
+In this case, you can add the URL to the `setting.json` file in VS Code (in MacOS open via `Preferences`), reload the window, and start using the schema.
 Example of the code you need to add to the `setting.json` file
 
 ```json
@@ -55,7 +56,7 @@ Cases for which you might need to do that:
 
 ## Community
 
-This project is taking it's first steps in the world. If you find any defects, please raise an [issue](https://github.com/TykTechnologies/vscode-tyk/issues). If you need support for more file formats, please raise an issue as well.
+This project is taking its first steps in the world. If you find any defects, please raise an [issue](https://github.com/TykTechnologies/vscode-tyk/issues). If you need support for more file formats, please raise an issue as well.
 We welcome code contributions as well, both in this repo and in [tyk-schemas](https://github.com/tykTechnologies/tyk-schemas) project.
 
 ## Local development
